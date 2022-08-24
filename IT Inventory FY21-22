@@ -1,0 +1,21 @@
+CREATE TABLE "IT_Inventory" (id INTEGER, name TEXT, cost REAL, quantity INTEGER, po_number INTEGER); 
+
+INSERT INTO "IT_Inventory" VALUES (1, 'Optiplex Micro', 1692, 25, 100098959);
+INSERT INTO "IT_Inventory" VALUES (2, 'Video Conference Monitors', $713, 30, 100095876);
+INSERT INTO "IT_Inventory" VALUES (3, 'Optiplex AiO', 1125, 100, 100093879);
+INSERT INTO "IT_Inventory" VALUES (4, 'MacBook Pro', 2299, 1, 100091212);
+INSERT INTO "IT_Inventory" VALUES (5, 'Dell Mobile 5470', 2303, 50, 100095287);
+INSERT INTO "IT_Inventory" VALUES (6, 'Dell Latitude 5520', 985, 20, 100095289);
+INSERT INTO "IT_Inventory" VALUES (7, 'Dell Latitude 5420', 993, 100, 100093734);
+INSERT INTO "IT_Inventory" VALUES (8, 'Dell 24in Monitors', 365, 100, 100093924);
+INSERT INTO "IT_Inventory" VALUES (9, 'Dell UltraSharp Curved Monitors', 770, 1, 100095285);
+INSERT INTO "IT_Inventory" VALUES (10, 'Dell Portable Monitors', 275, 2, 100095286);
+INSERT INTO "IT_Inventory" VALUES (11, 'Dell Latitude 7420', 1428, 20, 100095288);
+INSERT INTO "IT_Inventory" VALUES (12, 'iMac', 4349, 1, 100089226);
+INSERT INTO "IT_Inventory" VALUES (13, 'Bretford Cart Cables', 210, 1, 100090942);
+INSERT INTO "IT_Inventory" VALUES (14, 'iPad Minis', 449, 6, 100091885);
+
+
+SELECT SUM (quantity), SUM (cost) FROM IT_Inventory; 
+SELECT * FROM IT_Inventory 
+ORDER BY quantity desc;
