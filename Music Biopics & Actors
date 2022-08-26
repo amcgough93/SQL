@@ -1,0 +1,21 @@
+/* Create table about the people and what they do here */
+CREATE TABLE singers (id integer primary key, artist text, genre text, top_song text);
+
+INSERT INTO singers VALUES (1, 'Queen', 'Rock', 'Bohemian Rhapsody');
+INSERT INTO singers VALUES (2, 'Ray Charles', 'R&B', 'Hit the Road Jack');
+INSERT INTO singers VALUES (3, 'Elvis', 'Rock', 'Jailhouse Rock');
+INSERT INTO singers VALUES (4, 'Elton John', 'Pop', 'Rocket Man');
+INSERT INTO singers VALUES (5,'Aretha Franklin', 'Soul', 'Respect');
+
+CREATE TABLE actors (id integer primary key, actor text, musical_film text, year_released integer);
+INSERT INTO actors VALUES (1, 'Rami Malek','Bohemian Rhapsody', 2018);
+INSERT INTO actors VALUES (2, 'Jamie Foxx', 'Ray',2004);
+INSERT INTO actors VALUES (3, 'Austin Butler','Elvis', 2022);
+INSERT INTO actors VALUES (4, 'Taron Egerton', 'Rocket Man',2019);
+INSERT INTO actors VALUES (5, 'Jennifer Hudson', 'Respect', 2021); 
+
+SELECT singers.artist, actors.musical_film, actors.actor AS played_by
+FROM singers 
+LEFT OUTER JOIN actors 
+ON actors.id = singers.id
+
