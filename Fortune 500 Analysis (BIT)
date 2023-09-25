@@ -62,8 +62,23 @@ Analysis:
 
 1. What are the top 5 industries with the highest average revenue?
 
-Select industry, company_name, ROUND(avg(revenue),1) AS "avg_revenue"
+Select industry, company_name, ROUND(avg(revenue),1) AS "avg_revenue_billions"
 from fortune_companies
 Group by industry
-Order by "avg_revenue" desc
+Order by "avg_revenue_billions" desc
 LIMIT 5;
+
+2. Which company in 'Technology' has the most paid time off?
+
+Select company_name, paid_time_off_days
+From fortune_companies
+Where industry = "Technology"
+Order by paid_time_off_days desc;
+
+3. 
+
+4.
+
+
+
+
